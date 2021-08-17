@@ -10,6 +10,7 @@ import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import samebutdifferent.azalea.Azalea;
+import samebutdifferent.azalea.block.FloweringAzaleaLogBlock;
 
 import java.util.function.Supplier;
 
@@ -18,7 +19,7 @@ public class ModBlocks {
 
     public static final RegistryObject<RotatedPillarBlock> AZALEA_LOG = registerBlock("azalea_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_AZALEA_LOG = registerBlock("stripped_azalea_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-    public static final RegistryObject<RotatedPillarBlock> FLOWERING_AZALEA_LOG = registerBlock("flowering_azalea_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<FloweringAzaleaLogBlock> FLOWERING_AZALEA_LOG = registerBlock("flowering_azalea_log", FloweringAzaleaLogBlock::new);
     public static final RegistryObject<RotatedPillarBlock> AZALEA_WOOD = registerBlock("azalea_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_AZALEA_WOOD = registerBlock("stripped_azalea_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<Block> AZALEA_PLANKS = registerBlock("azalea_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
