@@ -1,6 +1,7 @@
 {
   "block.azalea.azalea_button": "Azalea Button",
   "block.azalea.azalea_door": "Azalea Door",
+  "block.azalea.flowering_azalea_door": "Flowering Azalea Door",
   "block.azalea.azalea_fence": "Azalea Fence",
   "block.azalea.azalea_fence_gate": "Azalea Fence Gate",
   "block.azalea.azalea_flower": "Azalea Flower",
@@ -15,5 +16,6 @@
   "block.azalea.flowering_azalea_planks": "Flowering Azalea Planks",
   "block.azalea.stripped_azalea_log": "Stripped Azalea Log",
   "block.azalea.stripped_azalea_wood": "Stripped Azalea Wood",
-  "block.azalea.moss": "Moss"
+  "block.azalea.moss": "Surface Moss",
+  "block.azalea.moss_layer": "Moss Layer"
 }

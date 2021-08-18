@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "azalea:azalea_button"
+    ]
+  },
+  "criteria": {
+    "has_azalea_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "azalea:azalea_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "azalea:azalea_button"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_azalea_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

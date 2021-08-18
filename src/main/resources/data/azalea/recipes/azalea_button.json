@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "azalea:azalea_planks"
+    }
+  ],
+  "result": {
+    "item": "azalea:azalea_button"
+  }
+}

@@ -18,7 +18,6 @@ import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import samebutdifferent.azalea.registry.ModBlocks;
 
 import javax.annotation.Nullable;
 

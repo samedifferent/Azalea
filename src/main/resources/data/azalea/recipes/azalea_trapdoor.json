@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "azalea:azalea_planks"
+    }
+  },
+  "result": {
+    "item": "azalea:azalea_trapdoor",
+    "count": 2
+  }
+}

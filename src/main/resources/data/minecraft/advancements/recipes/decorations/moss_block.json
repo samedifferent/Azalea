@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:moss_block"
+    ]
+  },
+  "criteria": {
+    "has_moss_layer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "azalea:moss_layer"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:moss_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_moss_layer",
+      "has_the_recipe"
+    ]
+  ]
+}
