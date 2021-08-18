@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "side": "azalea:block/flowering_azalea_log",
-    "end": "azalea:block/azalea_log_top"
+    "end": "azalea:block/flowering_azalea_log_top"
   }
 }

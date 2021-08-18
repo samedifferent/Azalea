@@ -15,7 +15,7 @@ public class ItemModelGenerator extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        ofBlock(ModBlocks.AZALEA_LOG);
+/*        ofBlock(ModBlocks.AZALEA_LOG);
         ofBlock(ModBlocks.STRIPPED_AZALEA_LOG);
         ofBlock(ModBlocks.FLOWERING_AZALEA_LOG);
         ofBlock(ModBlocks.AZALEA_PLANKS);
@@ -26,6 +26,9 @@ public class ItemModelGenerator extends ItemModelProvider {
         ofBlock(ModBlocks.AZALEA_FENCE_GATE);
         ofBlock(ModBlocks.AZALEA_FENCE_GATE);
         blockToItemGenerated(ModBlocks.AZALEA_FLOWER);
+        trapdoor(ModBlocks.AZALEA_TRAPDOOR);
+        generated(ModBlocks.AZALEA_DOOR);
+        generated(ModBlocks.FLOWERING_AZALEA_DOOR);*/
     }
 
     private void ofBlock(RegistryObject block) {

@@ -15,6 +15,7 @@ public class BlockstateGenerator extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+/*
         logBlock(ModBlocks.AZALEA_LOG.get());
         logBlock(ModBlocks.STRIPPED_AZALEA_LOG.get());
         logBlock(ModBlocks.FLOWERING_AZALEA_LOG.get());
@@ -26,6 +27,10 @@ public class BlockstateGenerator extends BlockStateProvider {
         fenceBlock(ModBlocks.AZALEA_FENCE.get(), planksTex);
         fenceGateBlock(ModBlocks.AZALEA_FENCE_GATE.get(), planksTex);
         crossModel(ModBlocks.AZALEA_FLOWER.get());
+        doorBlock(ModBlocks.AZALEA_DOOR.get(), modLoc("block/azalea_door_bottom"), modLoc("block/azalea_door_top"));
+        trapdoorBlock(ModBlocks.AZALEA_TRAPDOOR.get(), modLoc("block/azalea_trapdoor"), true);
+        doorBlock(ModBlocks.FLOWERING_AZALEA_DOOR.get(), modLoc("block/flowering_azalea_door_bottom"), modLoc("block/flowering_azalea_door_top"));
+*/
     }
 
     private void crossModel(Block plant) {
