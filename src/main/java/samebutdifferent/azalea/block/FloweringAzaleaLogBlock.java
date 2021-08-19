@@ -12,17 +12,20 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import samebutdifferent.azalea.registry.ModBlocks;
 
 public class FloweringAzaleaLogBlock extends RotatedPillarBlock {
-    public FloweringAzaleaLogBlock() {
-        super(BlockBehaviour.Properties.copy(Blocks.OAK_LOG));
+    public static Block unfloweredBlock;
+
+    public FloweringAzaleaLogBlock(Properties properties, Block unfloweredBlockIn) {
+        super(properties);
+        unfloweredBlockIn = unfloweredBlock;
     }
 
     @Override
@@ -30,21 +33,24 @@ public class FloweringAzaleaLogBlock extends RotatedPillarBlock {
         ItemStack itemstack = player.getItemInHand(hand);
         if (itemstack.is(Items.SHEARS)) {
             if (!world.isClientSide) {
-                Direction direction = hitResult.getDirection();
-                Direction facingDirection = direction.getAxis() == Direction.Axis.Y ? player.getDirection().getOpposite() : direction;
-                world.playSound(null, pos, SoundEvents.FLOWERING_AZALEA_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
-                world.setBlock(pos, ModBlocks.AZALEA_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(AXIS)), 11);
-                ItemEntity itementity = new ItemEntity(world, (double)pos.getX() + 0.5D + (double)facingDirection.getStepX() * 0.65D, (double)pos.getY() + 0.1D, (double)pos.getZ() + 0.5D + (double)facingDirection.getStepZ() * 0.65D, new ItemStack(ModBlocks.AZALEA_FLOWER.get().asItem(), 4));
-                itementity.setDeltaMovement(0.05D * (double)facingDirection.getStepX() + world.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double)facingDirection.getStepZ() + world.random.nextDouble() * 0.02D);
-                world.addFreshEntity(itementity);
-                itemstack.hurtAndBreak(1, player, (breakEvent) -> breakEvent.broadcastBreakEvent(hand));
-                world.gameEvent(player, GameEvent.SHEAR, pos);
-                player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));
+                Direction direction = hitResult.getDirection().getAxis() == Direction.Axis.Y ? player.getDirection().getOpposite() : hitResult.getDirection();
+                shearAzalea(world, player, pos, itemstack, hand, direction, unfloweredBlock.defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(AXIS)));
             }
 
             return InteractionResult.sidedSuccess(world.isClientSide);
         } else {
             return super.use(state, world, pos, player, hand, hitResult);
         }
+    }
+
+    public static void shearAzalea(Level world, Player player, BlockPos pos, ItemStack stack, InteractionHand hand, Direction direction, BlockState replacementState) {
+        world.playSound(null, pos, SoundEvents.FLOWERING_AZALEA_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
+        world.setBlock(pos, replacementState, 11);
+        ItemEntity itementity = new ItemEntity(world, (double) pos.getX() + 0.5D + (double) direction.getStepX() * 0.65D, (double) pos.getY() + 0.1D, (double) pos.getZ() + 0.5D + (double) direction.getStepZ() * 0.65D, new ItemStack(ModBlocks.AZALEA_FLOWER.get().asItem(), 2));
+        itementity.setDeltaMovement(0.05D * (double) direction.getStepX() + world.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double) direction.getStepZ() + world.random.nextDouble() * 0.02D);
+        world.addFreshEntity(itementity);
+        stack.hurtAndBreak(1, player, (player1) -> player1.broadcastBreakEvent(hand));
+        world.gameEvent(player, GameEvent.SHEAR, pos);
+        player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));
     }
 }
