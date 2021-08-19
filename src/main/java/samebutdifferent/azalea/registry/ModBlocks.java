@@ -5,6 +5,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -41,6 +42,7 @@ public class ModBlocks {
     public static final RegistryObject<AzaleaFlowerBlock> AZALEA_FLOWER = registerBlockToTab("azalea_flower", AzaleaFlowerBlock::new, CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<SurfaceMossBlock> MOSS = registerBlockToTab("moss", SurfaceMossBlock::new, CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<MossLayerBlock> MOSS_LAYER = registerBlockToTab("moss_layer", MossLayerBlock::new, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> POTTED_AZALEA_FLOWER = BLOCKS.register("potted_azalea_flower", () -> new FlowerPotBlock(ModBlocks.AZALEA_FLOWER.get(), BlockBehaviour.Properties.of(Material.DECORATION).instabreak().noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBuildingBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = ModBlocks.BLOCKS.register(name, block);
