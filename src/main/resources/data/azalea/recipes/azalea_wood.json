@@ -1,17 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "bark",
   "pattern": [
     "##",
     "##"
   ],
   "key": {
     "#": {
-      "item": "azalea:azalea_wood"
+      "item": "azalea:azalea_log"
     }
   },
   "result": {
-    "item": "azalea:azalea_log",
+    "item": "azalea:azalea_wood",
     "count": 3
   }
 }

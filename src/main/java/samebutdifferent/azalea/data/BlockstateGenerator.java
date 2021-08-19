@@ -31,6 +31,12 @@ public class BlockstateGenerator extends BlockStateProvider {
         trapdoorBlock(ModBlocks.AZALEA_TRAPDOOR.get(), modLoc("block/azalea_trapdoor"), true);
         doorBlock(ModBlocks.FLOWERING_AZALEA_DOOR.get(), modLoc("block/flowering_azalea_door_bottom"), modLoc("block/flowering_azalea_door_top"));
 */
+        ResourceLocation flowerPlanksTex = modLoc("block/" + ModBlocks.FLOWERING_AZALEA_PLANKS.get().getRegistryName().getPath());
+        slabBlock(ModBlocks.FLOWERING_AZALEA_SLAB.get(), flowerPlanksTex, flowerPlanksTex);
+        stairsBlock(ModBlocks.FLOWERING_AZALEA_STAIRS.get(), flowerPlanksTex);
+        fenceBlock(ModBlocks.FLOWERING_AZALEA_FENCE.get(), flowerPlanksTex);
+        fenceGateBlock(ModBlocks.FLOWERING_AZALEA_FENCE_GATE.get(), flowerPlanksTex);
+        trapdoorBlock(ModBlocks.FLOWERING_AZALEA_TRAPDOOR.get(), modLoc("block/flowering_azalea_trapdoor"), true);
     }
 
     private void crossModel(Block plant) {

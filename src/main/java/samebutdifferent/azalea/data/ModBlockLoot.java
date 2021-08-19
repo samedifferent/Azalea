@@ -8,8 +8,9 @@ import samebutdifferent.azalea.registry.ModBlocks;
 public class ModBlockLoot extends BlockLoot {
     @Override
     protected void addTables() {
-        createDoorTable(ModBlocks.AZALEA_DOOR.get());
-        createDoorTable(ModBlocks.FLOWERING_AZALEA_DOOR.get());
+        for (RegistryObject<Block> block : ModBlocks.BLOCKS.getEntries()) {
+            dropSelf(block.get());
+        }
     }
 
     @Override

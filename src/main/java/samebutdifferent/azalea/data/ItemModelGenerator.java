@@ -29,6 +29,11 @@ public class ItemModelGenerator extends ItemModelProvider {
         trapdoor(ModBlocks.AZALEA_TRAPDOOR);
         generated(ModBlocks.AZALEA_DOOR);
         generated(ModBlocks.FLOWERING_AZALEA_DOOR);*/
+        ofBlock(ModBlocks.FLOWERING_AZALEA_SLAB);
+        ofBlock(ModBlocks.FLOWERING_AZALEA_STAIRS);
+        fence(ModBlocks.FLOWERING_AZALEA_FENCE, ModBlocks.FLOWERING_AZALEA_PLANKS);
+        ofBlock(ModBlocks.FLOWERING_AZALEA_FENCE_GATE);
+        trapdoor(ModBlocks.FLOWERING_AZALEA_TRAPDOOR);
     }
 
     private void ofBlock(RegistryObject block) {

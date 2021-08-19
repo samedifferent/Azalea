@@ -5,6 +5,7 @@
     "azalea:stripped_azalea_log",
     "azalea:flowering_azalea_log",
     "azalea:azalea_wood",
+    "azalea:flowering_azalea_wood",
     "azalea:stripped_azalea_wood",
     "azalea:azalea_planks",
     "azalea:flowering_azalea_planks",
@@ -16,6 +17,11 @@
     "azalea:flowering_azalea_door",
     "azalea:azalea_trapdoor",
     "azalea:azalea_button",
-    "azalea:azalea_pressure_plate"
+    "azalea:azalea_pressure_plate",
+    "azalea:flowering_azalea_slab",
+    "azalea:flowering_azalea_stairs",
+    "azalea:flowering_azalea_fence",
+    "azalea:flowering_azalea_fence_gate",
+    "azalea:flowering_azalea_trapdoor"
   ]
 }

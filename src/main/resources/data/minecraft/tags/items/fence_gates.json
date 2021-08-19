@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "azalea:azalea_fence_gate"
+    "azalea:azalea_fence_gate",
+    "azalea:flowering_azalea_fence_gate"
   ]
 }

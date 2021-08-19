@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "azalea:block/flowering_azalea_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "azalea:block/flowering_azalea_wood"
+    },
+    "axis=z": {
+      "model": "azalea:block/flowering_azalea_wood",
+      "x": 90
+    }
+  }
+}

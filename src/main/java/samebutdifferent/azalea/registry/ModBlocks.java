@@ -17,10 +17,10 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Azalea.MOD_ID);
 
     public static final RegistryObject<AzaleaLogBlock> AZALEA_LOG = registerBuildingBlock("azalea_log", AzaleaLogBlock::new);
-    public static final RegistryObject<FloweringAzaleaLogBlock> FLOWERING_AZALEA_LOG = registerBuildingBlock("flowering_azalea_log", () -> new FloweringAzaleaLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG), ModBlocks.AZALEA_LOG.get()));
+    public static final RegistryObject<FloweringAzaleaLogBlock> FLOWERING_AZALEA_LOG = registerBuildingBlock("flowering_azalea_log", FloweringAzaleaLogBlock::new);
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_AZALEA_LOG = registerBuildingBlock("stripped_azalea_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
     public static final RegistryObject<RotatedPillarBlock> AZALEA_WOOD = registerBuildingBlock("azalea_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
-    public static final RegistryObject<FloweringAzaleaLogBlock> FLOWERING_AZALEA_WOOD = registerBuildingBlock("flowering_azalea_wood", () -> new FloweringAzaleaLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD), ModBlocks.AZALEA_WOOD.get()));
+    public static final RegistryObject<FloweringAzaleaWoodBlock> FLOWERING_AZALEA_WOOD = registerBuildingBlock("flowering_azalea_wood", FloweringAzaleaWoodBlock::new);
     public static final RegistryObject<RotatedPillarBlock> STRIPPED_AZALEA_WOOD = registerBuildingBlock("stripped_azalea_wood", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<Block> AZALEA_PLANKS = registerBuildingBlock("azalea_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> FLOWERING_AZALEA_PLANKS = registerBuildingBlock("flowering_azalea_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));

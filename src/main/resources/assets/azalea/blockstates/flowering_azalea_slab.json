@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "azalea:block/flowering_azalea_slab_top"
+    },
+    "type=bottom": {
+      "model": "azalea:block/flowering_azalea_slab"
+    },
+    "type=double": {
+      "model": "azalea:block/flowering_azalea_planks"
+    }
+  }
+}

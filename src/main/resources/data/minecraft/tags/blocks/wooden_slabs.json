@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "azalea:azalea_stairs"
+    "azalea:azalea_slab",
+    "azalea:flowering_azalea_slab"
   ]
 }
