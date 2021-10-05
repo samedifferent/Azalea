@@ -120,9 +120,11 @@ public class Azalea
             if (stack.is(Items.SHEARS)) {
                 if (state.is(Blocks.FLOWERING_AZALEA)) {
                     FloweringAzaleaLogBlock.shearAzalea(world, player, pos, stack, hand, direction, Blocks.AZALEA.defaultBlockState());
+                    player.swing(hand, true);
                 }
                 if (state.is(Blocks.FLOWERING_AZALEA_LEAVES)) {
                     FloweringAzaleaLogBlock.shearAzalea(world, player, pos, stack, hand, direction, Blocks.AZALEA_LEAVES.defaultBlockState());
+                    player.swing(hand, true);
                 }
             }
         }

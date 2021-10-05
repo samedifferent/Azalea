@@ -3,7 +3,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "azalea:azalea_log"
+      "tag": "azalea:azalea_logs"
     }
   ],
   "result": {

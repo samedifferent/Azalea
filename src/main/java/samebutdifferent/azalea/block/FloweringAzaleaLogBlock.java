@@ -44,7 +44,7 @@ public class FloweringAzaleaLogBlock extends RotatedPillarBlock {
     public static void shearAzalea(Level world, Player player, BlockPos pos, ItemStack stack, InteractionHand hand, Direction direction, BlockState replacementState) {
         world.playSound(null, pos, SoundEvents.FLOWERING_AZALEA_BREAK, SoundSource.BLOCKS, 1.0F, 1.0F);
         world.setBlock(pos, replacementState, 11);
-        ItemEntity itementity = new ItemEntity(world, (double) pos.getX() + 0.5D + (double) direction.getStepX() * 0.65D, (double) pos.getY() + 0.1D, (double) pos.getZ() + 0.5D + (double) direction.getStepZ() * 0.65D, new ItemStack(ModBlocks.AZALEA_FLOWER.get().asItem(), 2));
+        ItemEntity itementity = new ItemEntity(world, (double) pos.getX() + 0.5D + (double) direction.getStepX() * 0.65D, (double) pos.getY() + 0.1D, (double) pos.getZ() + 0.5D + (double) direction.getStepZ() * 0.65D, new ItemStack(ModBlocks.AZALEA_FLOWER.get().asItem()));
         itementity.setDeltaMovement(0.05D * (double) direction.getStepX() + world.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double) direction.getStepZ() + world.random.nextDouble() * 0.02D);
         world.addFreshEntity(itementity);
         stack.hurtAndBreak(1, player, (player1) -> player1.broadcastBreakEvent(hand));
