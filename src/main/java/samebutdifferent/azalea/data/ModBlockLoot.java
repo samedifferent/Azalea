@@ -2,7 +2,7 @@ package samebutdifferent.azalea.data;
 
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 import samebutdifferent.azalea.registry.ModBlocks;
 
 public class ModBlockLoot extends BlockLoot {

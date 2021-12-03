@@ -2,7 +2,7 @@ package samebutdifferent.azalea.data;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 import org.apache.commons.lang3.text.WordUtils;
 import samebutdifferent.azalea.Azalea;
 import samebutdifferent.azalea.registry.ModItems;
