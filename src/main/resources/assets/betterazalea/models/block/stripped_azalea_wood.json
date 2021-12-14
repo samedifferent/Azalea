@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "betterazalea:block/stripped_azalea_log",
+    "side": "betterazalea:block/stripped_azalea_log"
+  }
+}

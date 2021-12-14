@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "betterazalea:block/azalea_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "betterazalea:block/azalea_wood"
+    },
+    "axis=z": {
+      "model": "betterazalea:block/azalea_wood",
+      "x": 90
+    }
+  }
+}

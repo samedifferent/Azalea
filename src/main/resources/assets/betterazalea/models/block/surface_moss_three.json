@@ -1,0 +1,16 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "betterazalea:block/surface_moss_three",
+    "surface_moss": "betterazalea:block/surface_moss_three"
+  },
+  "elements": [
+    {   "from": [ 0, 0, 0.1 ],
+      "to": [ 16, 16, 0.1 ],
+      "faces": {
+        "north": { "uv": [ 16, 0, 0, 16 ], "texture": "#surface_moss" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#surface_moss" }
+      }
+    }
+  ]
+}

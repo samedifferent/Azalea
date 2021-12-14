@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "betterazalea:block/flowering_azalea_slab_top"
+    },
+    "type=bottom": {
+      "model": "betterazalea:block/flowering_azalea_slab"
+    },
+    "type=double": {
+      "model": "betterazalea:block/flowering_azalea_planks"
+    }
+  }
+}

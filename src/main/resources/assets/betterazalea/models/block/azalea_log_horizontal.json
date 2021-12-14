@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "side": "betterazalea:block/azalea_log",
+    "end": "betterazalea:block/azalea_log_top"
+  }
+}
