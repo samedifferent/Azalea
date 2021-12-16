@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "azalea:azalea_planks"
+      "item": "betterazalea:azalea_planks"
     }
   },
   "result": {
-    "item": "azalea:azalea_stairs",
+    "item": "betterazalea:azalea_stairs",
     "count": 4
   }
 }

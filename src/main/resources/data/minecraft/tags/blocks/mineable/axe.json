@@ -2,9 +2,20 @@
   "replace": false,
   "values": [
     "betterazalea:azalea_log",
+    "betterazalea:azalea_wood",
     "betterazalea:azalea_planks",
+    "betterazalea:azalea_slab",
+    "betterazalea:azalea_stairs",
+    "betterazalea:flowering_azalea_planks",
+    "betterazalea:flowering_azalea_slab",
+    "betterazalea:flowering_azalea_stairs",
     "betterazalea:azalea_door",
+    "betterazalea:flowering_azalea_door",
     "betterazalea:stripped_azalea_log",
-    "betterazalea:flowering_azalea_log"
+    "betterazalea:flowering_azalea_log",
+    "betterazalea:flowering_azalea_wood",
+    "betterazalea:stripped_azalea_wood",
+    "betterazalea:azalea_pressure_plate",
+    "betterazalea:azalea_button"
   ]
 }

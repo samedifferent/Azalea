@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "azalea:azalea_planks"
+      "item": "betterazalea:azalea_planks"
     }
   },
   "result": {
-    "item": "azalea:azalea_slab",
+    "item": "betterazalea:azalea_slab",
     "count": 6
   }
 }

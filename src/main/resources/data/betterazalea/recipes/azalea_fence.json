@@ -7,14 +7,14 @@
   ],
   "key": {
     "W": {
-      "item": "azalea:azalea_planks"
+      "item": "betterazalea:azalea_planks"
     },
     "#": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "azalea:azalea_fence",
+    "item": "betterazalea:azalea_fence",
     "count": 3
   }
 }

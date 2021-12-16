@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "azalea:azalea_planks"
+      "item": "betterazalea:azalea_planks"
     }
   },
   "result": {
-    "item": "azalea:azalea_fence_gate"
+    "item": "betterazalea:azalea_fence_gate"
   }
 }

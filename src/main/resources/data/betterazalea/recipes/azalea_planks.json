@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "azalea:azalea_logs"
+      "tag": "betterazalea:azalea_logs"
     }
   ],
   "result": {
-    "item": "azalea:azalea_planks",
+    "item": "betterazalea:azalea_planks",
     "count": 4
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/button_inventory",
   "textures": {
-    "texture": "azalea:block/azalea_planks"
+    "texture": "betterazalea:block/azalea_planks"
   }
 }

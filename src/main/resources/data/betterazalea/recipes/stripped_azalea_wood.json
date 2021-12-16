@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "azalea:stripped_azalea_log"
+      "item": "betterazalea:stripped_azalea_log"
     }
   },
   "result": {
-    "item": "azalea:stripped_azalea_wood",
+    "item": "betterazalea:stripped_azalea_wood",
     "count": 3
   }
 }

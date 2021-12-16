@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "azalea:block/azalea_flower"
+    "cross": "betterazalea:block/azalea_flower"
   }
 }

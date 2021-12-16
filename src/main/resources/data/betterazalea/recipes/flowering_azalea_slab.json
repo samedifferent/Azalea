@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "azalea:flowering_azalea_planks"
+      "item": "betterazalea:flowering_azalea_planks"
     }
   },
   "result": {
-    "item": "azalea:flowering_azalea_slab",
+    "item": "betterazalea:flowering_azalea_slab",
     "count": 6
   }
 }

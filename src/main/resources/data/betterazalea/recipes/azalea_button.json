@@ -3,10 +3,10 @@
   "group": "wooden_button",
   "ingredients": [
     {
-      "item": "azalea:azalea_planks"
+      "item": "betterazalea:azalea_planks"
     }
   ],
   "result": {
-    "item": "azalea:azalea_button"
+    "item": "betterazalea:azalea_button"
   }
 }

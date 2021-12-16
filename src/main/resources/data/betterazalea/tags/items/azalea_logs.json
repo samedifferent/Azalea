@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "betterazalea:azalea_log"
+    "betterazalea:azalea_log",
+    "betterazalea:azalea_wood",
+    "betterazalea:stripped_azalea_log",
+    "betterazalea:stripped_azalea_wood"
   ]
 }

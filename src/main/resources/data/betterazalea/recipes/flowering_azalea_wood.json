@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "azalea:flowering_azalea_log"
+      "item": "betterazalea:flowering_azalea_log"
     }
   },
   "result": {
-    "item": "azalea:flowering_azalea_wood",
+    "item": "betterazalea:flowering_azalea_wood",
     "count": 3
   }
 }

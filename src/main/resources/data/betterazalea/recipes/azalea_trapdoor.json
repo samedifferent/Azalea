@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "azalea:azalea_planks"
+      "item": "betterazalea:azalea_planks"
     }
   },
   "result": {
-    "item": "azalea:azalea_trapdoor",
+    "item": "betterazalea:azalea_trapdoor",
     "count": 2
   }
 }

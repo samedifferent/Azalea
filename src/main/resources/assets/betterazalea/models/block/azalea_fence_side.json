@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/fence_side",
   "textures": {
-    "texture": "azalea:block/azalea_planks"
+    "texture": "betterazalea:block/azalea_planks"
   }
 }

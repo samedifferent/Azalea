@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "azalea:block/flowering_azalea_planks"
+    "all": "betterazalea:block/flowering_azalea_planks"
   }
 }

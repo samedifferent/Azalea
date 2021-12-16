@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/fence_post",
   "textures": {
-    "texture": "azalea:block/flowering_azalea_planks"
+    "texture": "betterazalea:block/flowering_azalea_planks"
   }
 }

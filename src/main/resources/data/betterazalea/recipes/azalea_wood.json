@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "azalea:azalea_log"
+      "item": "betterazalea:azalea_log"
     }
   },
   "result": {
-    "item": "azalea:azalea_wood",
+    "item": "betterazalea:azalea_wood",
     "count": 3
   }
 }

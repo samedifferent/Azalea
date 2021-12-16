@@ -6,10 +6,10 @@
   ],
   "key": {
     "#": {
-      "item": "azalea:azalea_planks"
+      "item": "betterazalea:azalea_planks"
     }
   },
   "result": {
-    "item": "azalea:azalea_pressure_plate"
+    "item": "betterazalea:azalea_pressure_plate"
   }
 }
