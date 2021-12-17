@@ -1,16 +1,15 @@
 package com.samebutdifferent.azalea.block;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -19,12 +18,14 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Map;
 import java.util.Objects;
 
 @SuppressWarnings("deprecation")
 public class SurfaceMossBlock extends Block {
         public static final IntProperty LAYERS = IntProperty.of("layers", 1, 3);
         public static final DirectionProperty FACING = Properties.FACING;
+        public static final Map FACING_PROPERTIES;
         protected static final VoxelShape EAST_AABB = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 1.0D, 16.0D, 16.0D);
         protected static final VoxelShape WEST_AABB = Block.createCuboidShape(15.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
         protected static final VoxelShape SOUTH_AABB = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 1.0D);
@@ -82,6 +83,9 @@ public class SurfaceMossBlock extends Block {
         public boolean isTranslucent(BlockState state, BlockView getter, BlockPos pos) {
             return state.getFluidState().isEmpty();
         }
+        public static BooleanProperty getFacingProperty(Direction direction) {
+            return (BooleanProperty)FACING_PROPERTIES.get(direction);
+        }
 
         @Nullable
         @Override
@@ -107,5 +111,11 @@ public class SurfaceMossBlock extends Block {
         @Override
         public PistonBehavior getPistonBehavior(BlockState state) {
             return PistonBehavior.DESTROY;
+        }
+
+        static {
+            FACING_PROPERTIES = ConnectingBlock.FACING_PROPERTIES.entrySet().stream().filter((entry) -> {
+                return entry.getKey() != Direction.DOWN;
+            }).collect(Util.toMap());
         }
 }

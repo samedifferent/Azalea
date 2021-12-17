@@ -11,6 +11,8 @@ import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.world.biome.BiomeKeys;
+import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.*;
 import net.minecraft.world.gen.feature.UndergroundPlacedFeatures;
 
@@ -57,6 +59,8 @@ public class Azalea implements ModInitializer {
                 c.getGenerationSettings().removeBuiltInFeature(UndergroundPlacedFeatures.ROOTED_AZALEA_TREE);
                 c.getGenerationSettings().addFeature(VEGETAL_DECORATION, BuiltinRegistries.PLACED_FEATURE.getKey(NEW_ROOTED_AZALEA_TREE).get());
             });
+            BiomeModifications.addFeature(context -> (context.getBiomeKey().equals(LUSH_CAVES)), GenerationStep.Feature.VEGETAL_DECORATION,
+                    BuiltinRegistries.PLACED_FEATURE.getKey(CustomPlacedFeatures.SURFACE_MOSS).get());
         }
     }
 }
