@@ -10,6 +10,6 @@ public class CustomFeature<FC extends FeatureConfig> {
         return (F) Registry.register(Registry.FEATURE, name, feature);
     }
     static {
-        SURFACE_MOSS = register("surface_moss", new MossConfiguredFeature(RandomPatchFeatureConfig.CODEC));
+        SURFACE_MOSS = register("surface_moss", new MossConfiguredFeature(MossPatchFeatureConfig.CODEC));
     }
 }

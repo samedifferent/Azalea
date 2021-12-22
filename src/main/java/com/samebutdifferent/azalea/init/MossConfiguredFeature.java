@@ -22,12 +22,12 @@ import net.minecraft.world.gen.feature.util.FeatureContext;
 
 import static com.samebutdifferent.azalea.block.SurfaceMossBlock.FACING;
 
-public class MossConfiguredFeature extends Feature<RandomPatchFeatureConfig> {
-    public MossConfiguredFeature(Codec<RandomPatchFeatureConfig> codec) {
+public class MossConfiguredFeature extends Feature<MossPatchFeatureConfig> {
+    public MossConfiguredFeature(Codec<MossPatchFeatureConfig> codec) {
         super(codec);
     }
 
-    public boolean generate(FeatureContext<RandomPatchFeatureConfig> context) {
+    public boolean generate(FeatureContext<MossPatchFeatureConfig> context) {
         StructureWorldAccess structureWorldAccess = context.getWorld();
         BlockPos blockPos = context.getOrigin();
         context.getConfig();
@@ -39,12 +39,16 @@ public class MossConfiguredFeature extends Feature<RandomPatchFeatureConfig> {
 
             for (Direction direction : var4) {
                 if (direction != Direction.DOWN && VineBlock.shouldConnectTo(structureWorldAccess, blockPos.offset(direction), direction)) {
-                    structureWorldAccess.setBlockState(blockPos, (BlockState) BlocksRegistry.SURFACE_MOSS.getDefaultState().with(SurfaceMossBlock.LAYERS, 1).with(FACING, direction.getOpposite()), 2);
+                    structureWorldAccess.setBlockState(blockPos, (BlockState) BlocksRegistry.SURFACE_MOSS.getDefaultState().with(SurfaceMossBlock.LAYERS, getRandomNumber(1, 3)).with(FACING, direction.getOpposite()), 2);
                     return true;
                 }
             }
 
             return false;
         }
+    }
+
+    public int getRandomNumber(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
     }
 }
