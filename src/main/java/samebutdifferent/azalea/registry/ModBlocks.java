@@ -43,6 +43,10 @@ public class ModBlocks {
     public static final RegistryObject<SurfaceMossBlock> MOSS = registerBlockToTab("moss", SurfaceMossBlock::new, CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<MossLayerBlock> MOSS_LAYER = registerBlockToTab("moss_layer", MossLayerBlock::new, CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> POTTED_AZALEA_FLOWER = BLOCKS.register("potted_azalea_flower", () -> new FlowerPotBlock(ModBlocks.AZALEA_FLOWER.get(), BlockBehaviour.Properties.of(Material.DECORATION).instabreak().noOcclusion()));
+    public static final RegistryObject<ModStandingSignBlock> AZALEA_SIGN = BLOCKS.register("azalea_sign", () -> new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.AZALEA));
+    public static final RegistryObject<ModWallSignBlock> AZALEA_WALL_SIGN = BLOCKS.register("azalea_wall_sign", () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD).dropsLike(AZALEA_SIGN.get()), ModWoodTypes.AZALEA));
+    public static final RegistryObject<ModStandingSignBlock> FLOWERING_AZALEA_SIGN = BLOCKS.register("flowering_azalea_sign", () -> new ModStandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD), ModWoodTypes.FLOWERING_AZALEA));
+    public static final RegistryObject<ModWallSignBlock> FLOWERING_AZALEA_WALL_SIGN = BLOCKS.register("flowering_azalea_wall_sign", () -> new ModWallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0F).sound(SoundType.WOOD).dropsLike(FLOWERING_AZALEA_SIGN.get()), ModWoodTypes.FLOWERING_AZALEA));
 
     private static <T extends Block> RegistryObject<T> registerBuildingBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = ModBlocks.BLOCKS.register(name, block);
