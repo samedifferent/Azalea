@@ -10,7 +10,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import samebutdifferent.azalea.Azalea;
 import samebutdifferent.azalea.block.ModWoodTypes;
 import samebutdifferent.azalea.registry.ModBlocks;
-import samebutdifferent.azalea.worldgen.ModFeatures;
+import samebutdifferent.azalea.worldgen.ModVegetationFeatures;
 
 @Mod.EventBusSubscriber(modid = Azalea.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEventHandler {
@@ -22,7 +22,7 @@ public class ModEventHandler {
                     .put(ModBlocks.FLOWERING_AZALEA_LOG.get(), ModBlocks.STRIPPED_AZALEA_LOG.get())
                     .put(ModBlocks.FLOWERING_AZALEA_WOOD.get(), ModBlocks.STRIPPED_AZALEA_WOOD.get())
                     .put(ModBlocks.AZALEA_WOOD.get(), ModBlocks.STRIPPED_AZALEA_WOOD.get()).build();
-            ModFeatures.registerAzaleaTree();
+            ModVegetationFeatures.register();
             WoodType.register(ModWoodTypes.AZALEA);
             WoodType.register(ModWoodTypes.FLOWERING_AZALEA);
         });
