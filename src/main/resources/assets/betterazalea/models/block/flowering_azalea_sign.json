@@ -1,5 +1,6 @@
 {
+  "parent": "minecraft:item/generated",
   "textures": {
-    "particle": "betterazalea:block/flowering_azalea_planks"
+    "layer0": "betterazalea:block/flowering_azalea_planks"
   }
 }
