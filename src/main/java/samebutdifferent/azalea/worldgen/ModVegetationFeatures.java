@@ -21,7 +21,7 @@ import samebutdifferent.azalea.Azalea;
 import samebutdifferent.azalea.registry.ModBlocks;
 
 public class ModVegetationFeatures {
-    public static final ConfiguredFeature<TreeConfiguration, ?> AZALEA_TREE = Feature.TREE.configured(new TreeConfiguration.TreeConfigurationBuilder(
+    public static final ConfiguredFeature<TreeConfiguration, ?> AZALEA_TREE = new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
             new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.AZALEA_LOG.get().defaultBlockState(), 2).add(ModBlocks.FLOWERING_AZALEA_LOG.get().defaultBlockState(), 1).build()),
             new BendingTrunkPlacer(4, 2, 0, 3, UniformInt.of(1, 2)),
             new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(Blocks.AZALEA_LEAVES.defaultBlockState(), 3).add(Blocks.FLOWERING_AZALEA_LEAVES.defaultBlockState(), 1).build()),
