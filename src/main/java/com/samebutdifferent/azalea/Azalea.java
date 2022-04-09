@@ -24,6 +24,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.SignType;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.minecraft.world.gen.decorator.*;
 import net.minecraft.world.gen.feature.UndergroundPlacedFeatures;
 
@@ -53,14 +54,23 @@ public class Azalea implements ModInitializer {
     public static final SignType FLOWERING_AZALEA_SIGN_TYPE = SignTypeAccessor.registerNew(SignTypeAccessor.newSignType("flowering_azalea"));
     public static final Block FLOWERING_AZALEA_SIGN = new AzaleaSignBlock(AbstractBlock.Settings.of(Material.WOOD, MapColor.TERRACOTTA_RED).noCollision().strength(1.0F).sounds(BlockSoundGroup.WOOD), FLOWERING_AZALEA_SIGN_TYPE);
     public static final Block FLOWERING_AZALEA_WALL_SIGN = new AzaleaWallSignBlock(AbstractBlock.Settings.of(Material.WOOD, MapColor.TERRACOTTA_WHITE).noCollision().strength(1.0F).sounds(BlockSoundGroup.WOOD).dropsLike(FLOWERING_AZALEA_SIGN), FLOWERING_AZALEA_SIGN_TYPE);
+    
+    public static final SignType AZALEA_SIGN_TYPE = SignTypeAccessor.registerNew(SignTypeAccessor.newSignType("azalea"));
+    public static final Block AZALEA_SIGN = new AzaleaSignBlock(AbstractBlock.Settings.of(Material.WOOD, MapColor.TERRACOTTA_RED).noCollision().strength(1.0F).sounds(BlockSoundGroup.WOOD), AZALEA_SIGN_TYPE);
+    public static final Block AZALEA_WALL_SIGN = new AzaleaWallSignBlock(AbstractBlock.Settings.of(Material.WOOD, MapColor.TERRACOTTA_WHITE).noCollision().strength(1.0F).sounds(BlockSoundGroup.WOOD).dropsLike(AZALEA_SIGN), AZALEA_SIGN_TYPE);
 
 
     @Override
     public void onInitialize() {
 
+        
+
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "flowering_azalea_sign"), FLOWERING_AZALEA_SIGN);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "flowering_azalea_wall_sign"), FLOWERING_AZALEA_WALL_SIGN);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "flowering_azalea_sign"), (Item)(new SignItem(new Item.Settings().maxCount(16).group(ItemGroup.DECORATIONS), FLOWERING_AZALEA_SIGN, FLOWERING_AZALEA_WALL_SIGN)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "azalea_sign"), AZALEA_SIGN);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "azalea_wall_sign"), AZALEA_WALL_SIGN);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "azalea_sign"), (Item)(new SignItem(new Item.Settings().maxCount(16).group(ItemGroup.DECORATIONS), AZALEA_SIGN, AZALEA_WALL_SIGN)));
 
 
         Reflection.initialize(
@@ -84,6 +94,8 @@ public class Azalea implements ModInitializer {
                 c.getGenerationSettings().addFeature(VEGETAL_DECORATION, BuiltinRegistries.PLACED_FEATURE.getKey(CustomPlacedFeatures.SURFACE_MOSS).get());
 
             });
-        }
+        };
+
+        CompostingChanceRegistry.INSTANCE.add(SURFACE_MOSS, 0.3f);
     }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "betterazalea:item/generated",
+  "textures": {
+    "layer0": "betterazalea:item/azalea_sign"
+  }
+}

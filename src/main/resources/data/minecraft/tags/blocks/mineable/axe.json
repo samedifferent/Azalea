@@ -18,6 +18,12 @@
     "betterazalea:azalea_pressure_plate",
     "betterazalea:azalea_button",
     "betterazalea:flowering_azalea_sign",
-    "betterazalea:flowering_azalea_wall_sign"
+    "betterazalea:flowering_azalea_wall_sign",
+    "betterazalea:azalea_sign",
+    "betterazalea:azalea_wall_sign",
+    "betterazalea:flowering_azalea_fence",
+    "betterazalea:flowering_azalea_fence_gate",
+    "betterazalea:azalea_fence",
+    "betterazalea:azalea_fence_gate"
   ]
 }
